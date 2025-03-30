@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Variable Hoisting</h3>
+
+    <script>
+        var a; // undefine
+        document.write(a);  
+        var a = 10;
+        document.write(a); // 10
+
+        document.write("<br><br>"); 
+
+        //---------------------------------------------------------------
+
+        //console.log(y); // ReferenceError: Cannot access 'y' before initialization
+        // let y = 10;
+         document.write("<br><br>"); 
+        //---------------------------------------------------------------
+         
+        sayhello();
+        function sayhello(){
+            document.write("hello world")
+        }
+        document.write("<br><br>"); 
+
+         //---------------------------------------------------------------
+
+        greet();  // TypeError: greet is not a function
+
+        var greet= function(){
+            console.log("hello world")
+        }
+        
+        /* 
+        ✔ var is hoisted, but its initial value is undefined.
+
+        ✔ let and const are hoisted, but give error on first use.
+        
+        ✔ Function declaration is completely hoisted, so it can be called first.
+        
+        ✔ Function expression is not hoisted, so calling it first will give error.
+        */
+
+
+    </script>
+</body>
+</html>
