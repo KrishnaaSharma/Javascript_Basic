@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Arrow Function</h3>
+
+    <script>
+       // Normal function
+        function greet(name) {
+            return "Hello, " + name;
+        }
+        console.log(greet("Rahul <br><hr>")); // Output: Hello, Rahul
+         
+        //---------------------------------------------------------------
+         // Arrow Function With Multiple Parameter
+         var arrow = (x,y) =>{                            
+            document.write("Sum of x and y: ",x+y); 
+        }
+        arrow(100,200);
+        
+        document.write("<br><hr>")
+     
+        //---------------------------------------------------------------
+
+      // Arrow function with  return
+      var add = (a, b) => {
+            return a + b;
+        };
+
+        document.write(add(2, 3)); // Output: 5
+
+        document.write("<br><hr>")
+      
+    //---------------------------------------------------------------
+
+       
+        //  Arrow Function with No Parameters
+        const sayhello = () => "hello rahul";
+        console.log(sayhello());
+
+
+
+    </script>
+</body>
+</html>
