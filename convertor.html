@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .main {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .operation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #display {
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #increase {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        #increase:hover {
+            background-color: #45a049;
+        }
+        
+        #reset {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        #reset:hover {
+            background-color: #d32f2f;
+        }
+        
+        #decrease {
+            background-color: #2196F3;
+            color: white;
+        }
+        
+        #decrease:hover {
+            background-color: #0b7dda;
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="operation">
+            <h1>Counter</h1>
+            <input type="number" name="" id="display" value="0"><br><br>
+            <div class="button-group">
+                <button id="increase">Increase</button>
+                <button id="reset">Reset</button>
+                <button id="decrease">Decrease</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let dis = document.getElementById('display');
+        let inc = document.getElementById('increase');
+        let res = document.getElementById('reset');
+        let dec = document.getElementById('decrease');
+
+        let v = parseInt(dis.value);
+
+        inc.onclick = function() {
+            v++;
+            dis.value = v;
+        };
+        
+        dec.onclick = function() {
+            v--;
+            dis.value = v;
+        };
+        
+        res.onclick = function() {
+            v = 0;
+            dis.value = v;
+        };
+    </script>
+</body>
+</html>
