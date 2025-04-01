@@ -32,3 +32,5 @@ console.log(slidearray)
 let fruit_splice = ['apple', 'banana', 'orange', 'grape', 'kiwi'];
 fruit_splice.splice(2, 2, 'mango', 'peach')
 console.log(fruit_splice) // (5) ['apple', 'banana', 'mango', 'peach', 'kiwi']
+
+
